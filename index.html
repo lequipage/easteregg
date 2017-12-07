@@ -8,12 +8,27 @@
 </head>
 <body>
 
+  <script src="jquery-3.2.1.min.js"></script>
   <script src="easterEgg/easterEgg.js"></script>
 
   <script>
   const eE = new easterEgg();
-  eE.drunk();
+          document.body.addEventListener('keypress',function(e){
+            eE.tipSomething(e, document.getElementsByTagName('body')[0], "drunk", "drunk");
+          });
+
   </script>
+
+  <h1>easterEgg.js</h1>
+
+  <strong>Envie d'un shooter ? Tape "drunk" au clavier pour en obtenir un effet conséquent.</strong>
+
+  <p style="color:red">Si un élément de type input est focalisé, l'action par clé ne se déclenchera pas !</p>
+  <input class="input" type="text" placeholder="Essaye ici."/>
+
+  <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vel elit id neque porttitor pulvinar a rutrum sem. Donec odio lectus, condimentum vel bibendum vel, imperdiet quis dui. Etiam vel maximus magna, nec convallis nunc. In suscipit facilisis ante eu tincidunt. Phasellus consectetur nisl nec est ultricies, id auctor urna viverra. Donec dapibus porta urna, non dictum lacus rhoncus et. Duis tristique varius semper. Vestibulum efficitur odio at risus sollicitudin, eget volutpat justo feugiat. Donec venenatis neque id lobortis rutrum. Integer sit amet tempor tellus, ornare viverra mi.</p>
+
+  <p>Vestibulum hendrerit vitae mauris eu sollicitudin. In eget augue sit amet sapien sagittis iaculis quis vitae risus. Proin eget convallis justo, in aliquam mi. Vivamus sed efficitur justo. Maecenas pulvinar nibh sit amet ornare aliquet. Quisque bibendum felis erat, id imperdiet neque sollicitudin sed. Proin vitae purus sit amet est fringilla dignissim. Suspendisse lobortis commodo massa, nec viverra nulla ultricies vitae. Fusce pretium urna sapien, et fermentum erat condimentum vitae. Phasellus sit amet justo at purus venenatis vehicula. Integer in elementum lectus. Sed sagittis augue massa, quis fringilla lorem malesuada nec. Nulla accumsan eleifend ante, ac tempor nulla volutpat a. Ut eget tortor et dui facilisis euismod. Pellentesque mauris risus, finibus quis consectetur sit amet, pulvinar non elit. Fusce aliquet est elit, quis efficitur massa maximus sit amet. </p>
 
 </body>
 </html>
