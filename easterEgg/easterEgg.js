@@ -3,21 +3,33 @@ function easterEgg(){
 
 var current_tip = "";
 
-// Tip Something
-easterEgg.prototype.tipSomething = function(e, el, word, action){
+/*
+* function typeSomething
+* Trigger an "action" when a "word" is written on keyboard
+* It will only work if no input is focus
+* @e : keypress event (event)
+* @action : action to trig (fonction)
+* @el : where the action is triggered (dom)
+* @word : word to write to trig the action (string)
+*/
+easterEgg.prototype.typeSomething = function(e, word, action){
   if ($('input:focus').length == 0){
     current_tip += String.fromCharCode(e.which);
     console.log(current_tip);
     if(current_tip.includes(word)){
-        if (action == "drunk")
-          this.drunk(el);
-        current_tip = "";
+      current_tip = "";
+      return true;
     }
   }
 }
 
-/*Function Drunk*/
-easterEgg.prototype.drunk = function (el, it = 3, t = 4, f = 1) {
+/*
+* function tipSomething
+* Got a drunk effect on an element
+* @el : the element which is triggered
+* @word : word to write to trig the action (string)
+*/
+easterEgg.prototype.drunk = function (it = 3, t = 4, f = 1, el = document.getElementsByTagName('body')[0]) {
     let c = 0;
     const a = () => {
         if (c < it) {

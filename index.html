@@ -13,10 +13,9 @@
 
   <script>
   const eE = new easterEgg();
-          document.body.addEventListener('keypress',function(e){
-            eE.tipSomething(e, document.getElementsByTagName('body')[0], "drunk", "drunk");
-          });
-
+  document.body.addEventListener('keypress',function(e){
+    if (eE.typeSomething(e, "drunk")) eE.drunk();
+  });
   </script>
 
   <h1>easterEgg.js</h1>
